@@ -253,7 +253,7 @@ Inside this memory flash we found what appears to be an access list with our pin
 ![EEPROMcontent](/assets/img/2023-03-15/2023-03-15-EEPROM-content.jpeg){: .mx-auto.d-block :} 
 
 
-## Hardware Analysis
+## Conclusions
 
 * It is never a good idea to reinvent the wheel: The Security Manager (SM) and Generic Access Profile (GAP) levels of the BLE core specification specify rules and algorithms to allow secure connections.
 * Always follow code best practices and code review
