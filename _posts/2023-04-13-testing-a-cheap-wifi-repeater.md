@@ -1,7 +1,6 @@
 ---
 layout: post
-title: From hardware analysis to RCE
-subtitle: Dissecting a cheap wifi repeater
+title: Route to RCE - hardware & firmware analysis of a cheap WiFi repeater 
 tags: [hacking,RCE,wifi,repeater,hardware,firmware,ghidra]
 comments: true
 thumbnail-img: /assets/img/2023-04-13/aigital.jpeg
