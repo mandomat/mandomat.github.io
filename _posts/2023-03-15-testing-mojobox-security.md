@@ -3,6 +3,7 @@ layout: post
 title: MojoBox - yet another not so smartlock
 subtitle: 
 tags: [hacking,ble,bluetooth,physec,appsec]
+thumbnail-img: /assets/img/2023-03-15/2023-03-15-opens.gif
 comments: true
 ---
 
