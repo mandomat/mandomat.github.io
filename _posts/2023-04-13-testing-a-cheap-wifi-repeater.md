@@ -90,7 +90,7 @@ It should be noted that this functionality is not actually present in any of the
 
 Cheap devices like this are a lot of fun to explore and can be used to do some experiments. I am sure there would be much more to analyze but, to be completely honest, in re-soldering the SPI last time I blew a PCB trace and so for now my experiments on this device are over :D. 
 
-CVE-2023-30404 and CVE-2023-30405 were assigned to the vulnerabilities reported in this post.
+CVE-2023-30402, CVE-2023-30404 and CVE-2023-30405 were assigned to the vulnerabilities reported in this post.
 **Thanks for reading**
 
 
