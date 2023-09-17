@@ -260,4 +260,6 @@ Inside this memory flash we found what appears to be an access list with our pin
 * Always follow code best practices and code review
 * Security is a process not a product, therefore it must be applied in each phase of the life cycle of a product. 
 
+CVE-2023-34625 was assigned to the vulnerability reported in this post.
+
 **Stay tuned for future works. Thank you!**
