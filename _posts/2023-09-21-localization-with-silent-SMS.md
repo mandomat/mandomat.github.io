@@ -101,8 +101,11 @@ It should be noted that the obtained RNTI can be also used for further attacks.
 **Stay tuned for future works. Thank you!**
 
 References:
+
 https://www.slideshare.net/iazza/dcm-final-23052013fullycensored
+
 https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=747
+
 https://www.ndss-symposium.org/wp-content/uploads/2018/02/ndss2018_02A-4_Hong_paper.pdf
 
 
