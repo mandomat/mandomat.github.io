@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Using silent SMSs to localize LTE users
+title: Using silent SMS to localize LTE users
 subtitle: Proof of concept implementation
 tags: [telco,SDR,USRP,LTEsniffer,silent,SMS]
 comments: true
