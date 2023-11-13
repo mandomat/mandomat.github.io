@@ -21,6 +21,10 @@ common-js:
 
 <!DOCTYPE html>
 <html lang="{{ page.language | default: site.language | default: 'en' }}">
+
+{% if page.custom-css %}
+<link rel="stylesheet" href="{{ page.custom-css | prepend: site.baseurl }}">
+{% endif %}
 <!-- Beautiful Jekyll 5.0.0 | Copyright Dean Attali 2020 -->
 {% include head.html %}
 
@@ -36,5 +40,7 @@ common-js:
 
   {% include footer-scripts.html %}
 
+  <script type="text/javascript" src="/assets/js/lightbox.js"></script>
+  <link rel="stylesheet" href="/assets/css/lightbox.css">
 </body>
 </html>

@@ -509,8 +509,8 @@ footer .footer-custom-content {
 .post-preview .post-image {
   float: right;
   margin-left: 0.625rem;
-  height: 12rem;
-  width: 12rem;
+  height: 15rem;
+  width: 15rem;
 }
 .post-preview .post-image {
   filter: grayscale(40%);
@@ -832,6 +832,7 @@ table {
   padding: 0;
 }
 table tr {
+  
   border-top: 1px solid #cccccc;
   background-color: #ffffff;
   margin: 0;

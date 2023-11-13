@@ -29,8 +29,7 @@ The 3GPP has defined six types of messages that can be exchanged between the Mob
 As per definition the SMS SUBMIT is short message transfer protocol data unit containing user data (the short message), being sent from an MS to an SC.
 The Transfer Protocol Data Uniti (TPDU) format consists of a series of 8-bit encoded information, represented by an ASCII string made up of pairs of hexadecimal digits, with each one representing 8 bits. The schematic rapresentation of a TPDU is as follows:
 
-
-![TPDU](/assets/img/2023-09-21/TPDU.png){: .mx-auto.d-block :}
+[![TPDU](/assets/img/2023-09-21/TPDU.png)](/assets/img/2023-09-21/TPDU.png)
 
 The specification tells us that the TP-Protocol-Identifier (TP-PID) consists of one octet. Among the various bit configurations in this octet, we read that in the case where bit 7 is 0, bit 6 is 1, and bits 5 to 0 are all zeros, an SMS-SUBMIT PDU of type "Short Message Type 0" is configured.
 
@@ -39,7 +38,7 @@ This type of message, as described shortly afterward in the document in section 
 
 To create a PDU easily, you can use one of the online services as you can see from the photo below. The service will generate a standard message. To make it silent, now that we have identified the bit responsible for this configuration, we just need to follow the scenario described above, where TP-PID should be equal to 01000000 (40 in hex).
 
-![TPDU](/assets/img/2023-09-21/build_SMS-PDU.png){: .mx-auto.d-block :}
+[![SMSPDU](/assets/img/2023-09-21/build_SMS-PDU.png){: .mx-auto.d-block :}](/assets/img/2023-09-21/build_SMS-PDU.png)
 
 
 ## Sending a silent SMS
@@ -56,13 +55,14 @@ AT+CMGS=19  //Send message, 19 octets (excluding the two initial zeros)
 //^Z acts as an "enter"
 ~~~
 
-![sendingsilent](/assets/img/2023-09-21/sending_silent_SMS.jpeg){: .mx-auto.d-block :}
+[![sendingsilent](/assets/img/2023-09-21/sending_silent_SMS.jpeg){: .mx-auto.d-block :}](/assets/img/2023-09-21/sending_silent_SMS.jpeg)
 
 
 To check the reception of the silent message, I connected the target phone to a PC and launched [QCsuper](https://github.com/P1sec/QCSuper). As you can see from the image below, the silent message was received correctly!
 
 ![reveivedsms](/assets/img/2023-09-21/received_silent_SMS2.jpeg){: .mx-auto.d-block :}
-![reveivedsms](/assets/img/2023-09-21/received_silent_SMS.jpeg){: .mx-auto.d-block :}
+[![reveivedsms](/assets/img/2023-09-21/received_silent_SMS.jpeg){: .mx-auto.d-block :}](/assets/img/2023-09-21/received_silent_SMS.jpeg)
+
 
 ## Finding the victim location
 
@@ -88,8 +88,7 @@ This script will send 10 messages, each with a 2-second interval between them, c
 At this point, all the attacker needs to do is connect their own USRP B210 and use [LTEsniffer](https://github.com/SysSec-KAIST/LTESniffer) to sniff LTE downlink traffic from the base station. As we mentioned earlier, for this simplified proof of concept, the attacker needs to be aware of the area where they are looking for the victim. This means discovering the frequency of the base station covering the area (or alternatively, its ID). To solve this problem, one can use a smartphone app like [Network Signal Guru](https://play.google.com/store/apps/details?id=com.qtrun.QuickTest&hl=it&gl=US) in the area of interest, using a SIM card from the same provider as the victim.
 
 
-![packets](/assets/img/2023-09-21/packets.jpeg){: .mx-auto.d-block :}
-
+[![packets](/assets/img/2023-09-21/packets.jpeg){: .mx-auto.d-block :}](/assets/img/2023-09-21/packets.jpeg)
 
 The hypothetical attacker, after listening to LTE transmissions with LTEsniffer for a sufficient amount of time, will end up with a pcap file containing the Downlink Control Information (DCIs) and Radio Network Temporary Identifiers (RNTIs) of all active users.
 
