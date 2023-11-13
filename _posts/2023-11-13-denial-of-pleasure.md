@@ -135,7 +135,7 @@ The chip bears the inscription "2322CTg," but we couldn't find anything about it
 :-------------------------:|:-------------------------:
 [![chiptrue](/assets/img/2023-11-13/chip.jpeg){:width="300px"}](/assets/img/2023-11-13/chip.png) | [![chip](/assets/img/2023-11-13/chip.png){:width="600px"}](/assets/img/2023-11-13/chip.png)
 
-After arranging all the connections, we used Nando's board logic analyzer to understand what happens when different broadcast packets are sent. In the image below, ADBUS7 corresponds to the pin at 1.2V, which seemed the most likely to be involved in activating the motor upon the arrival of the broadcast packet. Indeed, by using different modes of the application, we observed that channel zero began emitting signals precisely at the moment of the click. In the images below, we can see the different signal patterns corresponding to modes 1 and 4 and 7 of the mobile app.
+After arranging all the connections, we used Nando's board logic analyzer to understand what happens when different broadcast packets are sent. In the image below, ADBUS7 corresponds to the pin at 1.2V, which seemed the most likely to be involved in activating the motor upon the arrival of the broadcast packet. Indeed, by using different modes of the application, we observed that this channel began emitting signals precisely at the moment of the click. In the images below, we can see the different signal patterns corresponding to modes 1 and 4 and 7 of the mobile app.
 
 [![pulseview](/assets/img/2023-11-13/pulseview.png){: .mx-auto.d-block :}{:width="500px"}](/assets/img/2023-11-13/pulseview.png) 
 
