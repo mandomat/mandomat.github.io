@@ -32,7 +32,7 @@ Please enjoy my amazing drawing representing an ADV_IND Packet format in the ima
 
 [![adv_packet](/assets/img/2023-11-13/adv_packet.png){: .mx-auto.d-block :}{:width="400px"}](/assets/img/2023-11-13/adv_packet.png)
 
-The AD data contains flags, UUIDS, the name of the Broadcaster and other things we will mostly ignore creating the packet we need for our porpouses.
+The AD data contains flags, UUIDS, the name of the Broadcaster and other things we will mostly ignore creating the packet we need for our purposes.
 
 ## Retrieving the magic packet
 
