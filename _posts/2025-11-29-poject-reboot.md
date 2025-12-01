@@ -3,7 +3,7 @@ layout: post
 title: Project Reboot
 subtitle: A rescue themed hacking lab
 tags: [hacking, hardware, training, education, challenge]
-thumbnail-img: /assets/img/2025-11-29/cover.gif
+thumbnail-img: /assets/img/2025-11-29/cover.GIF
 comments: true
 custom-css: /assets/css/reboot.css
 ---
