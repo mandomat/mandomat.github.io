@@ -27,15 +27,7 @@ layout: null
         <media:thumbnail url="{{ post.thumbnail-img | default: post.cover-img | default: post.share-img | absolute_url }}" />
         <media:content url="{{ post.thumbnail-img | default: post.cover-img | default: post.share-img | absolute_url }}" medium="image" />
         {% endif %}
-        <content:encoded><![CDATA[
-          {% if post.thumbnail-img or post.cover-img %}
-          <img src="{{ post.thumbnail-img | default: post.cover-img | absolute_url }}" alt="{{ post.title }}" style="max-width: 100%; height: auto; margin-bottom: 20px;" />
-          {% endif %}
-          {% if post.subtitle %}
-          <p><strong>{{ post.subtitle }}</strong></p>
-          {% endif %}
-          {{ post.content | replace: 'src="/', 'src="https://mandomat.github.io/' | replace: 'href="/', 'href="https://mandomat.github.io/' }}
-        ]]></content:encoded>
+        <content:encoded><![CDATA[{% if post.thumbnail-img or post.cover-img %}<img src="{{ post.thumbnail-img | default: post.cover-img | absolute_url }}" alt="{{ post.title }}" style="max-width: 100%; height: auto; margin-bottom: 20px;" />{% endif %}{% if post.subtitle %}<p><strong>{{ post.subtitle }}</strong></p>{% endif %}{{ post.content | replace: 'src="/', 'src="https://mandomat.github.io/' | replace: 'href="/', 'href="https://mandomat.github.io/' }}]]></content:encoded>
       </item>
     {% endfor %}
   </channel>
