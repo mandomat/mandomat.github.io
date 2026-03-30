@@ -2,7 +2,7 @@
 layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     {% if site.title %}
     <title>{{ site.title | xml_escape }}</title>
@@ -23,6 +23,19 @@ layout: null
         <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
         <link>{{ post.url | absolute_url }}</link>
         <guid isPermaLink="true">{{ post.url | absolute_url }}</guid>
+        {% if post.thumbnail-img or post.cover-img or post.share-img %}
+        <media:thumbnail url="{{ post.thumbnail-img | default: post.cover-img | default: post.share-img | absolute_url }}" />
+        <media:content url="{{ post.thumbnail-img | default: post.cover-img | default: post.share-img | absolute_url }}" medium="image" />
+        {% endif %}
+        <content:encoded><![CDATA[
+          {% if post.thumbnail-img or post.cover-img %}
+          <img src="{{ post.thumbnail-img | default: post.cover-img | absolute_url }}" alt="{{ post.title }}" style="max-width: 100%; height: auto; margin-bottom: 20px;" />
+          {% endif %}
+          {% if post.subtitle %}
+          <p><strong>{{ post.subtitle }}</strong></p>
+          {% endif %}
+          {{ post.content | replace: 'src="/', 'src="https://mandomat.github.io/' | replace: 'href="/', 'href="https://mandomat.github.io/' }}
+        ]]></content:encoded>
       </item>
     {% endfor %}
   </channel>
