@@ -29,7 +29,7 @@ layout: null
         <media:content url="https://mandomat.github.io{{ featured_image }}" medium="image" />
         <enclosure url="https://mandomat.github.io{{ featured_image }}" type="image/jpeg" />
         {% endif %}
-        <content:encoded><![CDATA[{% if post.thumbnail-img or post.cover-img %}<img src="https://mandomat.github.io{{ post.thumbnail-img | default: post.cover-img }}" alt="{{ post.title }}" style="max-width: 100%; height: auto; margin-bottom: 20px;" />{% endif %}<p><strong>{{ post.subtitle }}</strong></p>{{ post.content | replace: 'src="/', 'src="https://mandomat.github.io/' | replace: 'href="/', 'href="https://mandomat.github.io/' }}]]></content:encoded>
+        <content:encoded><![CDATA[{% if post.subtitle %}<p><strong>{{ post.subtitle }}</strong></p>{% endif %}{{ post.content | replace: 'src="/', 'src="https://mandomat.github.io/' | replace: 'href="/', 'href="https://mandomat.github.io/' }}]]></content:encoded>
       </item>
     {% endfor %}
   </channel>
